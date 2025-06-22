@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react';
 import {Text, View, FlatList, Image, StyleSheet, TouchableOpacity, ActivityIndicator,RefreshControl} from 'react-native';
 import axios from 'axios';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
 
 const ProductList = ({navigation}) =>{
@@ -97,7 +98,8 @@ const ProductList = ({navigation}) =>{
 
 
     return(
-        <View style = {styles.container}>
+        <SafeAreaView style = {styles.container}>
+        
 
             <FlatList 
 
@@ -115,7 +117,8 @@ const ProductList = ({navigation}) =>{
             />
 
             
-        </View>
+        
+        </SafeAreaView>
     );
 };
 
