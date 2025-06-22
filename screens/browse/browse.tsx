@@ -8,8 +8,9 @@ const BrowseStack = createStackNavigator();
 
 const Browse = () =>{
     return(
-        <BrowseStack.Navigator screenOptions ={{headerShown: true}}>
+        <BrowseStack.Navigator initialRouteName='Product List' screenOptions ={{headerShown: false}}> 
             <BrowseStack.Screen name ='Product List' component ={ProductList} />
+            <BrowseStack.Screen name = 'ProductDetailScreen' component ={ProductDetailScreeen} />
         </BrowseStack.Navigator>
     );
 };
