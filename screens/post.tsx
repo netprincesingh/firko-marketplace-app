@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import {Text, View, TextInput, Button, StyleSheet, ScrollView} from 'react-native';
+import {Text, View, TextInput, Button, StyleSheet, ScrollView,Alert} from 'react-native';
 import {Picker} from '@react-native-picker/picker';
 
 const Post = () =>{
@@ -21,10 +21,18 @@ const Post = () =>{
 
     const handleSubmit = () => {
         console.log('Form submitted', formData);
+
+        Alert.alert(
+        "Form Submitted!",
+        `Title: ${formData.title}\n Description: ${formData.description}`,
+        [{ text: "OK" }]
+  );
     }
 
     return(
         <ScrollView style ={styles.container}>
+
+            
             <Text style ={styles.label}>Title</Text>
             <TextInput 
               style = {styles.input}
@@ -89,6 +97,8 @@ const Post = () =>{
                 />
 
             </View>
+
+            
 
 
 
